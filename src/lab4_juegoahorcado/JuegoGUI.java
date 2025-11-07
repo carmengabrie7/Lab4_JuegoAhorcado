@@ -111,7 +111,6 @@ public class JuegoGUI extends JFrame {
             try {
                 acierto = juego.verificarLetra(letra);
                 if (acierto) juego.actualizarPalabraActual(letra);
-                else juego.intentos--;
             } catch (Throwable t) {
                 lblMensaje.setText("Error: " + t.getMessage());
                 return;

@@ -3,11 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/eduar/OneDrive/Documentos/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/Lab4_JuegoAhorcado.java</file>
-            <file>file:/C:/Users/eduar/OneDrive/Documentos/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/JuegoAhorcadoBase.java</file>
-            <file>file:/C:/Users/eduar/OneDrive/Documentos/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/JuegoAhorcadoFijo.java</file>
-            <file>file:/C:/Users/eduar/OneDrive/Documentos/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/JuegoAhorcado.java</file>
-            <file>file:/C:/Users/eduar/OneDrive/Documentos/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/AdminPalabrasSecretas.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/Lab4_JuegoAhorcado.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/JuegoAhorcadoBase.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/JuegoAhorcadoFijo.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/AdminPalabrasSecretas.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/AdminException.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/JuegoGUI.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/MenuAhorcado.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/JuegoAhorcadoAzar.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/LetraRepetidaException.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/Lab4_JuegoAhorcado/src/lab4_juegoahorcado/JuegoTerminadoException.java</file>
         </group>
     </open-files>
 </project-private>

@@ -23,7 +23,7 @@ public boolean verificarLetra(char letra){
     }
     letrasUsadas.add(letra);
     
-    if(letrasUsadas.indexOf(letra) >= 0){
+    if(palabraSecreta.indexOf(letra) >= 0){
         System.out.println("Letra correcta: ");
         return true;
     }else{
@@ -55,6 +55,14 @@ public void actualizarPalabraActual(char letra){
 public boolean hasGanado(){
    return palabraActual.equals(palabraSecreta);
 }
+
+ public String getFiguraAhorcadoActual() {
+        int errores = limiteIntentos - intentos;
+        if (errores >= 0 && errores < figuraAhorcado.size()) {
+            return figuraAhorcado.get(errores);
+        }
+        return "";
+    }
 
 @Override
 public void jugar(char letra){
