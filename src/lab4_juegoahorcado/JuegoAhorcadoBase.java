@@ -36,8 +36,10 @@ public abstract class JuegoAhorcadoBase implements JuegoAhorcado {
         figuraAhorcado.add(" O\n/|\\\n/ \\");
     }
     
+    public abstract void inicializarPalabraSecreta();
+    public abstract void jugar(char letra);
     public abstract void actualizarPalabraActual(char letra);
-    public abstract boolean verifivarLetra(char letra);
+    public abstract boolean verificarLetra(char letra);
     public abstract boolean hasGanado();
     
     
