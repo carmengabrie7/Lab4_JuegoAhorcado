@@ -27,8 +27,20 @@ public abstract class JuegoAhorcadoBase {
     }
     
     protected void inicializarFigura(){
-        
+        figuraAhorcado.add("");
+        figuraAhorcado.add(" O ");
+        figuraAhorcado.add(" O\n | ");
+        figuraAhorcado.add(" O\n/| ");
+        figuraAhorcado.add(" O\n/|\\");
+        figuraAhorcado.add(" O\n/|\\\n/ ");
+        figuraAhorcado.add(" O\n/|\\\n/ \\");
     }
+    
+    public abstract void actualizarPalabraActual(char letra);
+    public abstract boolean verifivarLetra(char letra);
+    public abstract boolean hasGanado();
+    
+    
     
     
     
