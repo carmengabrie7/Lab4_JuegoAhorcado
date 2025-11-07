@@ -8,16 +8,26 @@ public class AdminPalabrasSecretas {
     //Gestiona dinamicamente las palabras del juego
     ArrayList<String> palabrasDisponibles = new ArrayList<String>();
     
+    
     public AdminPalabrasSecretas (ArrayList<String> palabrasDisponibles){
         this.palabrasDisponibles=palabrasDisponibles;
     }
     
-    public boolean agregarPalabras (String palabra){
+    public boolean agregarPalabras (String palabra) 
+            throws AdminException.palabraDuplicada{
+        if (palabrasDisponibles.contains(palabra)){
+            throw new AdminException.palabraDuplicada("La palabra ya existe.");
+        }  
         palabrasDisponibles.add(palabra);
         return true;
     }
     
-    public String obtenerRandom (){
+    public String obtenerRandom ()
+    throws AdminException.sinPalabras{
+        if (palabrasDisponibles.isEmpty()){
+            throw new AdminException.sinPalabras("No hay palabras disponibles.");
+        }
+        
         Random random = new Random();
         int indice = random.nextInt(palabrasDisponibles.size());
         return palabrasDisponibles.get(indice);

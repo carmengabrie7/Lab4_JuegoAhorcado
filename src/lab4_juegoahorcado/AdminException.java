@@ -1,13 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package lab4_juegoahorcado;
-
-/**
- *
- * @author DELL
- */
-public class AdminException {
+public class AdminException extends Exception{
+    
+    //validar que no se agreguen duplicados
+    public static class palabraDuplicada extends Exception{
+        public palabraDuplicada (String mensaje){
+            super(mensaje);
+        }
+    }
+    //validar que haya palabras disponibles
+    public static class sinPalabras extends Exception{
+        public sinPalabras (String mensaje){
+            super(mensaje);
+        }
+    }
     
 }
