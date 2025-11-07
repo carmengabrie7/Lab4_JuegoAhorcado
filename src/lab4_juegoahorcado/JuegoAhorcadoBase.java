@@ -10,7 +10,7 @@ package lab4_juegoahorcado;
  */
 import java.util.ArrayList;
 
-public abstract class JuegoAhorcadoBase {
+public abstract class JuegoAhorcadoBase implements JuegoAhorcado {
     
     protected String palabraSecreta;
     protected String palabraActual;
