@@ -28,12 +28,12 @@ public abstract class JuegoAhorcadoBase implements JuegoAhorcado {
     
     protected void inicializarFigura(){
         figuraAhorcado.add("");
-        figuraAhorcado.add(" O ");
-        figuraAhorcado.add(" O\n | ");
-        figuraAhorcado.add(" O\n/| ");
-        figuraAhorcado.add(" O\n/|\\");
-        figuraAhorcado.add(" O\n/|\\\n/ ");
-        figuraAhorcado.add(" O\n/|\\\n/ \\");
+        figuraAhorcado.add("  O ");
+        figuraAhorcado.add("  O\n | ");
+        figuraAhorcado.add("  O\n/| ");
+        figuraAhorcado.add("  O\n/|\\");
+        figuraAhorcado.add("  O\n/|\\\n/ ");
+        figuraAhorcado.add("  O\n/|\\\n/ \\");
     }
     
     public abstract void inicializarPalabraSecreta();

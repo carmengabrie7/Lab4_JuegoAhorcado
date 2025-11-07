@@ -8,9 +8,9 @@ package lab4_juegoahorcado;
  *
  * @author Gabriel
  */
-public interface JuegoAhorcado {
+public class LetraRepetidaException extends Exception {
     
-    void inicializarPalabraSecreta();
-    
-    void jugar(char letra);
+    public LetraRepetidaException(String mensaje) {
+        super(mensaje);
+    }
 }

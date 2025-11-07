@@ -1,6 +1,6 @@
 package lab4_juegoahorcado;
 
-public abstract class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
+public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
 
 public JuegoAhorcadoFijo(String palabra){
     super();

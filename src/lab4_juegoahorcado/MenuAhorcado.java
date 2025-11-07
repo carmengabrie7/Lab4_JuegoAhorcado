@@ -53,27 +53,26 @@ public class MenuAhorcado extends JFrame {
         fondo.add(btnSalir);
 
         btnJugar.addActionListener(e -> {
-                  String[] opciones = {"Palabra fija", "Palabra al azar"};
-            int seleccion = JOptionPane.showOptionDialog(
-                    this,
-                    "¿Cómo deseas jugar?",
-                    "Seleccionar modo",
-                    JOptionPane.DEFAULT_OPTION,
-                    JOptionPane.QUESTION_MESSAGE,
-                    null,
-                    opciones,
-                    opciones[0]
-            );
-            if (seleccion == 0) { // palabra fija
-                JuegoGUI juego = new JuegoGUI();
-                juego.setVisible(true);
-                dispose();
-            } else if (seleccion == 1) { // palabra al azar
-                JuegoGUI juego = new JuegoGUI();
-                juego.setVisible(true);
-                dispose();
-            }
-        });
+    String[] opciones = {"Palabra fija", "Palabra al azar"};
+    int seleccion = JOptionPane.showOptionDialog(
+            this,
+            "¿Cómo deseas jugar?",
+            "Seleccionar modo",
+            JOptionPane.DEFAULT_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+            null,
+            opciones,
+            opciones[0]
+    );
+
+    if (seleccion == 0) { // palabra fija
+        new JuegoGUI("fijo").setVisible(true);
+        dispose();
+    } else if (seleccion == 1) { // palabra al azar
+        new JuegoGUI("azar").setVisible(true);
+        dispose();
+    }
+});
 
         // Acción del botón Salir → cierra la aplicación
         btnSalir.addActionListener(e -> System.exit(0));
