@@ -9,6 +9,7 @@ public class JuegoGUI extends JFrame {
 
     private JuegoAhorcadoBase juego;
 
+    
     public JuegoGUI(String modo) {
         setTitle("Juego del Ahorcado");
         setSize(600, 500);
@@ -16,8 +17,10 @@ public class JuegoGUI extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setLayout(null);
+        
+        ImageIcon logo = new ImageIcon("src/lab4_juegoahorcado/logo.png"); 
+        setIconImage(logo.getImage()); 
 
-        // FONDO
         JLabel fondo = new JLabel();
         fondo.setBounds(0, 0, 600, 500);
         fondo.setOpaque(true);
@@ -26,7 +29,7 @@ public class JuegoGUI extends JFrame {
         add(fondo);
 
         // TÍTULO
-        JLabel titulo = new JLabel("🎯 JUEGO DEL AHORCADO", SwingConstants.CENTER);
+        JLabel titulo = new JLabel("JUEGO DEL AHORCADO", SwingConstants.CENTER);
         titulo.setFont(new Font("Times New Roman", Font.BOLD, 26));
         titulo.setForeground(Color.WHITE);
         titulo.setBounds(0, 30, 600, 30);
