@@ -6,12 +6,14 @@ import java.util.Random;
 
 public class AdminPalabrasSecretas {
     //Gestiona dinamicamente las palabras del juego
-    ArrayList<String> palabrasDisponibles = new ArrayList<String>();
+    ArrayList<String> palabrasDisponibles;
     
-    public AdminPalabrasSecretas (ArrayList<String> palabrasDisponibles){
-        this.palabrasDisponibles=palabrasDisponibles;
+    
+    public AdminPalabrasSecretas (){
+        palabrasDisponibles = new ArrayList<String>();
     }
     
+
     public AdminPalabrasSecretas(){
         this.palabrasDisponibles = new ArrayList<>();
         agregarPalabrasIniciales();
@@ -25,7 +27,7 @@ public class AdminPalabrasSecretas {
         palabrasDisponibles.add("INTERFAZ");
         palabrasDisponibles.add("HERENCIA");
         palabrasDisponibles.add("POLIMORFISMO");
-        palabrasDisponibles.add("ENCAPSULAMIENTO");
+        palabrasDisponibles.add("ABSTRACTO");
     }
     
     public boolean agregarPalabras (String palabra){
@@ -40,6 +42,23 @@ public class AdminPalabrasSecretas {
        if (palabrasDisponibles.isEmpty()) {
             return "JAVA"; // Palabra por defecto si no hay palabras
         }
+
+    public boolean agregarPalabras (String palabra) 
+            throws AdminException.palabraDuplicada{
+        if (palabrasDisponibles.contains(palabra)){
+            throw new AdminException.palabraDuplicada("La palabra ya existe.");
+        }  
+        palabrasDisponibles.add(palabra);
+        return true;
+    }
+    
+    public String obtenerRandom ()
+    throws AdminException.sinPalabras{
+        if (palabrasDisponibles.isEmpty()){
+            throw new AdminException.sinPalabras("No hay palabras disponibles.");
+        }
+        
+
         Random random = new Random();
         int indice = random.nextInt(palabrasDisponibles.size());
         return palabrasDisponibles.get(indice);
