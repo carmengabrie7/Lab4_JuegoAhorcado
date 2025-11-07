@@ -1,6 +1,8 @@
 package lab4_juegoahorcado;
 
+import java.awt.Color;
 import java.awt.Font;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -10,78 +12,81 @@ import javax.swing.SwingConstants;
 
 public class JuegoGUI extends JFrame {
 
+    private JuegoAhorcadoBase juego;
    public JuegoGUI() {
       setTitle("Juego Ahorcado");
-      setSize(500,500);
+      setSize(600,500);
      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setLocationRelativeTo(null);
+      setLayout(null);
       
       JLabel fondo = new JLabel();
-      fondo.setBounds(0, 0, 500, 500);
+      fondo.setBounds(0, 0, 600, 500);
         fondo.setLayout(null);
+        fondo.setOpaque(true);
+        fondo.setForeground(Color.white);
+        add(fondo);
       
       
-      JLabel titulo = new JLabel ("🎯 JUEGO DEL AHORCADO", SwingConstants.CENTER);
-      titulo.setFont(new Font("Arial", Font.BOLD, 22));
-      titulo.setBounds(0, 20, 600, 30);
+      JLabel titulo = new JLabel ("JUEGO DEL AHORCADO", SwingConstants.CENTER);
+      titulo.setFont(new Font("Times New Roman", Font.BOLD, 22));
+      titulo.setBounds(0, 30, 600, 20);
       fondo.add(titulo);
       
       JLabel lblPalabra = new JLabel("_ _ _ _ _", SwingConstants.CENTER);
         lblPalabra.setFont(new Font("Consolas", Font.BOLD, 28));
-        lblPalabra.setBounds(100, 100, 400, 40);
+        lblPalabra.setBounds(0, 100, 600, 40);
         fondo.add(lblPalabra);
 
         JLabel lblFigura = new JLabel();
         lblFigura.setFont(new Font("Monospaced", Font.PLAIN, 14));
-        lblFigura.setBounds(230, 150, 200, 120);
+        lblFigura.setBounds(0, 150, 600, 120);
         fondo.add(lblFigura);
 
         JLabel lblIntentos = new JLabel("Intentos restantes: 6", SwingConstants.CENTER);
         lblIntentos.setFont(new Font("Arial", Font.PLAIN, 16));
-        lblIntentos.setBounds(150, 280, 300, 30);
+        lblIntentos.setBounds(0, 280, 600, 30);
         fondo.add(lblIntentos);
 
         JLabel lblMensaje = new JLabel("Seleccione modo de juego", SwingConstants.CENTER);
-        lblMensaje.setBounds(100, 320, 400, 30);
+             lblMensaje.setBounds(0, 320, 600, 30);
         fondo.add(lblMensaje);
 
         JTextField txtLetra = new JTextField();
-        txtLetra.setBounds(200, 360, 50, 30);
+        txtLetra.setBounds(230, 360, 50, 30);
         txtLetra.setFont(new Font("Arial", Font.BOLD, 20));
         txtLetra.setHorizontalAlignment(JTextField.CENTER);
         fondo.add(txtLetra);
 
         JButton btnAdivinar = new JButton("Adivinar");
-        btnAdivinar.setBounds(270, 360, 100, 30);
+        btnAdivinar.setBounds(300, 360, 100, 30);
         btnAdivinar.setEnabled(false);
         fondo.add(btnAdivinar);
 
         JButton btnReiniciar = new JButton("Reiniciar");
-        btnReiniciar.setBounds(380, 360, 100, 30);
+       btnReiniciar.setBounds(410, 360, 100, 30);
         btnReiniciar.setEnabled(false);
         fondo.add(btnReiniciar);
 
         JButton btnFijo = new JButton("Palabra Fija");
-        btnFijo.setBounds(120, 410, 150, 30);
+        btnFijo.setBounds(180, 410, 120, 30);
         fondo.add(btnFijo);
-
+        
         JButton btnAzar = new JButton("Palabra al Azar");
         btnAzar.setBounds(320, 410, 150, 30);
         fondo.add(btnAzar);
         
         btnFijo.addActionListener(e -> {
-            juego = new JuegoAhorcadoFijo("JAVA");
-            iniciarJuego();
+            
         });
 
         // Acción: modo palabra aleatoria
         btnAzar.addActionListener(e -> {
-            AdminPalabrasSecretas admin = new AdminPalabrasSecretas(rrayList<String> palabrasDisponibles);
+            AdminPalabrasSecretas admin = new AdminPalabrasSecretas();
             admin.agregarPalabras("PROGRAMAR");
             admin.agregarPalabras("AHORCADO");
             admin.agregarPalabras("COMPUTADORA");
-            juego = new JuegoAhorcadoAzar(admin.obtenerPalabraAleatoria());
-            iniciarJuego();
+            
         });
 
         // Acción: adivinar letra
@@ -116,6 +121,9 @@ public class JuegoGUI extends JFrame {
             btnAdivinar.setEnabled(false);
             btnReiniciar.setEnabled(false);
         });
+        
+                fondo.setVisible(true);
+
 
         
 } 

@@ -6,11 +6,11 @@ import java.util.Random;
 
 public class AdminPalabrasSecretas {
     //Gestiona dinamicamente las palabras del juego
-    ArrayList<String> palabrasDisponibles = new ArrayList<String>();
+    ArrayList<String> palabrasDisponibles;
     
     
-    public AdminPalabrasSecretas (ArrayList<String> palabrasDisponibles){
-        this.palabrasDisponibles=palabrasDisponibles;
+    public AdminPalabrasSecretas (){
+        palabrasDisponibles = new ArrayList<String>();
     }
     
     public boolean agregarPalabras (String palabra) 
